@@ -1,4 +1,3 @@
-import { Timestamp } from 'firebase/firestore';
 
 export interface Participant {
   uid: string;
@@ -11,5 +10,8 @@ export interface Room {
   hostId: string;
   participants: Participant[];
   isRecording: boolean;
-  createdAt: Timestamp;
+  createdAt: {
+    seconds: number;
+    nanoseconds: number;
+  };
 }

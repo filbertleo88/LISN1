@@ -14,7 +14,7 @@ const features = [
     icon: <Sparkles className="w-8 h-8 text-primary" />,
     title: 'AI-Powered Summarization',
     description:
-      'Gemini AI processes your transcripts to extract key points, decisions, and action items automatically.',
+      'Our AI processes your transcripts to extract key points, decisions, and action items automatically.',
   },
   {
     icon: <Users className="w-8 h-8 text-primary" />,
@@ -52,7 +52,7 @@ export default function Home() {
                   <Link href="/summarize">Start Summarizing</Link>
                 </Button>
                 <Button asChild variant="secondary" size="lg">
-                  <Link href="/rooms/create">Create a Room</Link>
+                  <Link href="/join">Create a Room</Link>
                 </Button>
               </div>
             </div>
