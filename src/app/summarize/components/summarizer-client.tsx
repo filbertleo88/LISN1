@@ -1,8 +1,8 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState, useEffect, useRef } from 'react';
+import { useFormStatus } from 'react-dom';
 import { getSummaryAndNarration, type SummaryState } from '../actions';
-import { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import {
@@ -40,7 +40,7 @@ function SubmitButton() {
 
 export default function SummarizerClient() {
   const initialState: SummaryState = { success: false };
-  const [state, formAction] = useFormState(getSummaryAndNarration, initialState);
+  const [state, formAction] = useActionState(getSummaryAndNarration, initialState);
   const { toast } = useToast();
   const resultsRef = useRef<HTMLDivElement>(null);
   
